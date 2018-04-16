@@ -1,8 +1,13 @@
 #pragma once
 #include "util/MathUtil.h"
-#include <caffe/net.hpp>
+//#include <caffe/net.hpp> //included in caffe/caffe.hpp
 #include <caffe/caffe.hpp>
 #include <mutex>
+
+/**
+* This module wraps the caffe net and provides functions to access and edit its parameters.
+* This wrapper presumes input data and input labels in the input layer, input weights are optional.
+*/
 
 class cNNSolver;
 
@@ -15,9 +20,9 @@ public:
 	{
 		tProblem();
 
-		Eigen::MatrixXd mX;
-		Eigen::MatrixXd mY;
-		Eigen::MatrixXd mW;
+		Eigen::MatrixXd mX; /// Input data
+		Eigen::MatrixXd mY; /// Label
+		Eigen::MatrixXd mW; /// Weights (How much influence have the Xes on the Ys ???)
 		int mPassesPerStep;
 
 		bool HasData() const;
@@ -71,7 +76,7 @@ public:
 	virtual void EvalBatch(const Eigen::MatrixXd& X, Eigen::MatrixXd& out_Y) const;
 	// y_diff should be the error you want to back propogate after calling Eval() to pass the values through the network
 	virtual void Backward(const Eigen::VectorXd& y_diff, Eigen::VectorXd& out_x_diff) const;
-	
+
 	virtual int GetInputSize() const;
 	virtual int GetOutputSize() const;
 	virtual int GetBatchSize() const;
@@ -131,12 +136,12 @@ protected:
 	static const int gWBlobIdx;
 
 	bool mValidModel;
-	
+
 	std::unique_ptr<cCaffeNetWrapper> mNet;
 	std::shared_ptr<cNNSolver> mSolver;
 	std::string mNetFile;
 	std::string mSolverFile;
-	
+
 	Eigen::VectorXd mInputOffset;
 	Eigen::VectorXd mInputScale;
 	Eigen::VectorXd mOutputOffset;

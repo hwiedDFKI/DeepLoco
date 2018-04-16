@@ -1,8 +1,12 @@
 #pragma once
 #include "NeuralNet.h"
-#include <caffe/net.hpp>
+//#include <caffe/net.hpp> //included in caffe/caffe.hpp
 #include <caffe/caffe.hpp>
 #include <caffe/sgd_solvers.hpp>
+
+/**
+* This module wraps the caffe solver.
+*/
 
 class cNNSolver
 {
@@ -26,7 +30,7 @@ public:
 		: cNNSolver(),
 		  tSolverType(param) {};
 	virtual ~cCaffeSolver() {};
-	
+
 	virtual boost::shared_ptr<caffe::Net<cNeuralNet::tNNData>> GetNet();
 	virtual void ApplySteps(int iters);
 	virtual cNeuralNet::tNNData ForwardBackward();
