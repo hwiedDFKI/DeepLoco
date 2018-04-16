@@ -164,6 +164,7 @@ project "DeepLoco"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -171,6 +172,7 @@ project "DeepLoco"
 			linuxLibraryLoc,
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
+      linuxLibraryLoc .. "caffe/build/include",
 			linuxLibraryLoc .. "caffe/build/src/",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
@@ -439,6 +441,7 @@ project "deepLocoUtil"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -447,6 +450,7 @@ project "deepLocoUtil"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
@@ -718,6 +722,7 @@ project "deepLocoLearning"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -726,6 +731,7 @@ project "deepLocoLearning"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
@@ -996,6 +1002,7 @@ project "deepLocoAnim"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -1004,6 +1011,7 @@ project "deepLocoAnim"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
@@ -1277,6 +1285,7 @@ project "deepLocoSim"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -1285,6 +1294,7 @@ project "deepLocoSim"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
@@ -1558,6 +1568,7 @@ project "deepLocoRender"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -1566,6 +1577,7 @@ project "deepLocoRender"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
@@ -1838,6 +1850,7 @@ project "deepLocoScenarios"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -1846,6 +1859,7 @@ project "deepLocoScenarios"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
@@ -2336,6 +2350,7 @@ project "DeepLoco_Optimizer"
 			linuxLibraryLoc .. "Bullet/bin",
 			linuxLibraryLoc .. "jsoncpp/build/debug/src/lib_json",
 			linuxLibraryLoc .. "caffe/build/lib",
+      linuxLibraryLoc .. "caffe/build/include"
 		}
 		
 		includedirs { 
@@ -2344,6 +2359,7 @@ project "DeepLoco_Optimizer"
 			linuxLibraryLoc .. "jsoncpp/include",
 			linuxLibraryLoc .. "caffe/include/",
 			linuxLibraryLoc .. "caffe/build/src/",
+      linuxLibraryLoc .. "caffe/build/include",
 			"C:/Program Files (x86)/boost/boost_1_58_0/",
 			linuxLibraryLoc .. "3rdparty/include/hdf5",
 			linuxLibraryLoc .. "3rdparty/include/",
