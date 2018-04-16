@@ -2,6 +2,10 @@
 
 #include "KinTree.h"
 
+/**
+* I believe: This module gets whole body information of the character. Meta level to KinTree
+* Setting KinTree relative to world. This is the "life" to the kintree skeleton
+*/
 class cCharacter
 {
 public:

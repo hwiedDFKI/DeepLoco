@@ -5,6 +5,10 @@
 #include <time.h>
 #include "util/MathUtil.h"
 
+/**
+* Solver for the inverse kinematics of a cKinTree class via Jacobian.
+*/
+
 class cIKSolver
 {
 public:

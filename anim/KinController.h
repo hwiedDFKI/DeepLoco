@@ -3,6 +3,11 @@
 #include <memory>
 #include "util/MathUtil.h"
 
+/**
+* Base defintion for inheritant controllers. Defines the basic structure of a controller
+*/
+
+
 class cKinCharacter;
 
 class cKinController : public std::enable_shared_from_this<cKinController>
@@ -26,6 +31,6 @@ public:
 protected:
 	cKinCharacter* mChar;
 	double mTime;
-	
+
 	cKinController();
 };

@@ -4,6 +4,12 @@
 #include "anim/Motion.h"
 #include "anim/KinController.h"
 
+/**
+* Inherits the character class.
+* This class gives motion_file control to the basic character.
+*/
+
+
 class cKinCharacter : public cCharacter
 {
 public:
@@ -26,7 +32,7 @@ public:
 
 	virtual void Pose(double time);
 	virtual void BuildAcc(Eigen::VectorXd& out_acc) const;
-	
+
 	virtual bool HasMotion() const;
 
 	virtual const tVector& GetOriginPos() const;

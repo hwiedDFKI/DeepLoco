@@ -6,6 +6,9 @@
 
 #include "util/MathUtil.h"
 
+/**
+* This module is the generic character/robot representation. URDF equivalent
+*/
 class cKinTree
 {
 public:
@@ -116,7 +119,7 @@ public:
 	static tVector CalcJointWorldPos(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int joint_id);
 	static tVector LocalToWorldPos(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int parent_id, const tVector& attach_pt);
 	static void CalcJointWorldTheta(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int joint_id, tVector& out_axis, double& out_theta);
-	
+
 	static tVector CalcJointWorldVel(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, const Eigen::VectorXd& vel, int joint_id);
 	static tVector CalcWorldVel(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, const Eigen::VectorXd& vel, int parent_id, const tVector& attach_pt);
 	static tVector CalcJointWorldAngularVel(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, const Eigen::VectorXd& vel, int joint_id);
@@ -144,11 +147,11 @@ public:
 	static double GetTorqueLimit(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static double GetForceLimit(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static bool IsEndEffector(const Eigen::MatrixXd& joint_mat, int joint_id);
-	
+
 	static tVector GetJointLimLow(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static tVector GetJointLimHigh(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static double GetJointDiffWeight(const Eigen::MatrixXd& joint_mat, int joint_id);
-	
+
 	static double CalcLinkLength(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static tVector GetAttachPt(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static tVector GetAttachTheta(const Eigen::MatrixXd& joint_mat, int joint_id);
@@ -156,13 +159,13 @@ public:
 	// calculates the longest chain in the subtree of each joint
 	static void CalcMaxSubChainLengths(const Eigen::MatrixXd& joint_mat, Eigen::VectorXd& out_lengths);
 	static void CalcSubTreeMasses(const Eigen::MatrixXd& joint_mat, const Eigen::MatrixXd& body_defs, Eigen::VectorXd& out_masses);
-	
+
 	static tMatrix BuildAttachTrans(const Eigen::MatrixXd& joint_mat, int joint_id);
 	static tMatrix ChildParentTrans(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int joint_id);
 	static tMatrix ParentChildTrans(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int joint_id);
 	static tMatrix JointWorldTrans(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int joint_id);
 	static tMatrix WorldJointTrans(const Eigen::MatrixXd& joint_mat, const Eigen::VectorXd& state, int joint_id);
-	
+
 	static bool Load(const Json::Value& root, Eigen::MatrixXd& out_joint_mat);
 	static int GetNumJoints(const Eigen::MatrixXd& joint_mat);
 	static int GetRoot(const Eigen::MatrixXd& joint_mat);
@@ -174,7 +177,7 @@ public:
 
 	static bool LoadDrawShapeDefs(const std::string& char_file, Eigen::MatrixXd& out_draw_defs);
 	static bool ParseDrawShapeDef(const Json::Value& root, tDrawShapeDef& out_def);
-	
+
 	static eBodyShape GetBodyShape(const Eigen::MatrixXd& body_defs, int part_id);
 	static tVector GetBodyAttachPt(const Eigen::MatrixXd& body_defs, int part_id);
 	static tVector GetBodyAttachTheta(const Eigen::MatrixXd& body_defs, int part_id);

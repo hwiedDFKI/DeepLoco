@@ -3,6 +3,9 @@
 #include "util/json/json.h"
 #include "KinTree.h"
 
+/**
+*This module is the structure containing the motion from the motion-files.
+*/
 class cMotion
 {
 public:

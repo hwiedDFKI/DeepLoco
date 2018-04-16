@@ -4,9 +4,14 @@
 #include "anim/Motion.h"
 #include "sim/BipedStepController3D.h"
 
+/**
+* Inheriting KinController. This controller controls the character by the mocap data.
+* to obtain the standing foot.
+*/
+
 class cMocapStepController : public cKinController {
 public:
-	
+
 	typedef cBipedStepController3D::eStance eStance;
 	typedef cBipedStepController3D::tStepPlan tStepPlan;
 
@@ -22,7 +27,7 @@ public:
 		eMotionFeatureMax
 	};
 	typedef Eigen::Matrix<double, eMotionFeatureMax, 1> tMotionFeatures;
-	
+
 	cMocapStepController();
 	virtual ~cMocapStepController();
 
@@ -94,13 +99,13 @@ protected:
 	virtual void ExtractMotionFeatures();
 	virtual void ExtractMotionFeatures(const cMotion& motion, tMotionFeatures& out_features) const;
 	virtual void ExtractMotionFeatures(const cMotion& motion, double phase_beg, tMotionFeatures& out_features) const;
-	virtual void ExtractMotionFeatures(const Eigen::VectorXd& pose_beg, const Eigen::VectorXd& pose_end, 
+	virtual void ExtractMotionFeatures(const Eigen::VectorXd& pose_beg, const Eigen::VectorXd& pose_end,
 										tMotionFeatures& out_features) const;
 	virtual int SelectNewMotion() const;
 	virtual void BuildPoseMotionFeatures(tMotionFeatures& out_features) const;
 	virtual void FindNearestMotion(const tMotionFeatures& pose_features, int& out_motion_id, double& out_min_dist) const;
 	virtual const tMotionFeatures& GetPhaseMotionFeature(double phase, int motion_id) const;
 	virtual double CalcMotionFeatureDist(const tMotionFeatures& feature0, const tMotionFeatures& feature1) const;
-	
+
 	virtual void ClusterMotions();
 };
