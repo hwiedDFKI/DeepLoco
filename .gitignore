@@ -57,3 +57,6 @@ __pycache__/
 
 # Experiment directory mounted from network share
 expt/
+
+# Doxygen-Output
+DOYGEN
