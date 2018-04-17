@@ -2,6 +2,10 @@
 
 #include "util/MathUtil.h"
 
+/**
+* This is the data structure for the experiment results containing the start state mStateBeg, end state mStateEnd, the action mAction and the reward mReward 
+*/
+
 struct tExpTuple
 {
 public:
@@ -16,7 +20,7 @@ public:
 	};
 
 	static bool TestFlag(unsigned int flag, int idx);
-	
+
 	tExpTuple();
 	tExpTuple(int state_size, int action_size);
 

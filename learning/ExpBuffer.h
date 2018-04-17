@@ -2,10 +2,14 @@
 
 #include "learning/ExpTuple.h"
 
+/**
+* This is the experience replay memory. In which the experience tuples are stored
+*/
+
 struct cExpBuffer
 {
 public:
-	
+
 	struct tParams
 	{
 		int mNumEntries;
